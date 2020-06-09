@@ -24,7 +24,7 @@ router.post("/api/posts", (req, res) => {
         })
       })
   })
-//COME BACK TO THIS
+
 router.post("/api/posts/:id/comments", (req, res) => {
     const comment = { post_id: req.params.id, ...req.body }
 
@@ -37,8 +37,7 @@ router.post("/api/posts/:id/comments", (req, res) => {
       .then((data) => {
         if (data) {
             res.status(201).json(data)
-            //doesn't work
-        } else {
+        } else  {
            res.status(404).json({error: "the post with the specified ID does not exist."})
         }
       })
