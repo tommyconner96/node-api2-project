@@ -51,10 +51,7 @@ router.post("/api/posts/:id/comments", (req, res) => {
 //GET posts
   router.get("/api/posts", (req, res) => {
     posts
-      .find({
-        sortBy: req.query.sortBy,
-        limit: req.query.limit,
-      })
+      .find()
       .then((posts) => {
         res.status(200).json(posts)
       })
