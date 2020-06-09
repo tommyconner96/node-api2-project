@@ -12,7 +12,7 @@ module.exports = {
   findCommentById,
   insertComment,
 };
-
+//hi
 function find() {
   return db('posts');
 }
